@@ -1,0 +1,202 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #06202a, #01212b);
+}
+
+/* Container */
+.container {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: all 0.6s ease-in-out;
+}
+ .error { color: red; font-size: 14px; }
+#signupForm{
+  display: none;
+}
+
+
+
+
+
+.error {
+  color: red;
+  font-size: 13px;
+  white-space: nowrap; /* keep error in one line */
+}
+
+/* Left panel */
+.left {
+  flex: 1;
+  background: url("../images/offer_!.png") no-repeat center ;
+  padding: 40px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.6s ease-in-out;
+}
+
+.left h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.left h2 span {
+  color: #fff;
+}
+
+.left p {
+  margin-top: 15px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Right panel */
+.right {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.6s ease-in-out;
+}
+
+.right h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #333;
+}
+.forgot-link{
+  margin-left: 240px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #b9151575;
+}
+.forgot-link:hover{
+  color: #0b0b0ba2;
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #333;
+}
+
+.divider {
+  text-align: center;
+  margin: 10px 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Google & Apple buttons */
+.btn-google{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-google:hover {
+  background: #000000;
+  color: white;
+}
+
+/* Animation states */
+.container.signup-mode .left {
+  transform: translateX(100%);
+}
+
+.container.signup-mode .right {
+  transform: translateX(-100%);
+}
+.toggle-link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  .left {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .left h2 {
+    font-size: 28px;
+  }
+
+  .right {
+    padding: 30px 20px;
+  }
+}
