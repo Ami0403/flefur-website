@@ -7,6 +7,8 @@
   <title>Checkout - The Flower Company</title>
   <link rel="stylesheet" href="css/checkout.css">
   <link rel="icon" href="">
+    <link rel="stylesheet" href="css/header.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     .upi-details {

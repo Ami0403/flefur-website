@@ -1,266 +1,120 @@
-/* General & Typography */
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
+  font-family: 'Abhaya Libre', serif;
 }
 
+
+
+/* Checkout Container */
 .checkout-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: 700px;
+  background: #fff;
+  margin: 40px auto;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Header */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+.checkout-container h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2e2e2e;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 500;
+/* Address Section */
+.address-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #444;
+  border-left: 4px solid #ff4081;
+  padding-left: 8px;
 }
 
-.bag-icon {
-    font-size: 1.2rem;
-    position: relative;
-    padding-right: 5px;
+.address-section form {
+  display: flex;
+  flex-direction: column;
 }
 
-.bag-icon i {
-    font-size: 1.5rem;
+.address-section label {
+  margin: 8px 0 5px;
+  font-weight: 500;
+  color: #555;
 }
 
-/* Main Layout */
-.checkout-content {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
+.address-section input,
+.address-section textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
 }
 
-.form-section {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.address-section input:focus,
+.address-section textarea:focus {
+  border-color: #ff4081;
+  box-shadow: 0 0 5px rgba(255, 64, 129, 0.4);
 }
 
-.summary-section {
-    flex: 1;
-    background-color: #f7f7f7;
-    padding: 2rem;
-    border-radius: 8px;
+textarea {
+  resize: none;
 }
 
-.form-section > div {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+/* Payment Options */
+.payment-options {
+  margin: 15px 0;
 }
 
-/* Form Styling */
-h2 {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-top: 0;
+.payment-options label {
+  font-size: 15px;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
-.contact-box .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
+.payment-options input {
+  margin-right: 8px;
 }
 
-.sign-in-link {
-    color: #555;
-    text-decoration: none;
-    font-size: 0.9rem;
+/* Place Order Button */
+.place-order-btn {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background: #ff4081;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.input-group {
-    margin-bottom: 1rem;
-    position: relative;
+.place-order-btn:hover {
+  background: #e73370;
+  transform: scale(1.02);
 }
 
-input, select {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    background-color: #fcfcfc;
-}
+/* Responsive */
+@media (max-width: 600px) {
+  .checkout-container {
+    margin: 20px;
+    padding: 20px;
+  }
 
-input:focus, select:focus {
-    outline: none;
-    border-color: #66b3ff;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
-}
+  .checkout-container h2 {
+    font-size: 24px;
+  }
 
-label {
-    display: block;
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 0.25rem;
-}
-
-.name-fields, .city-fields {
-    display: flex;
-    gap: 1rem;
-}
-
-.name-fields .input-group,
-.city-fields .input-group {
-    flex: 1;
-}
-
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    color: #555;
-    font-size: 0.9rem;
-}
-
-.checkbox-label input[type="checkbox"] {
-    width: auto;
-    margin-right: 0.5rem;
-}
-
-.info-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #999;
-    cursor: pointer;
-}
-
-.shipping-info-text {
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    text-align: center;
-    color: #777;
-}
-
-/* Summary Section Styling */
-.product-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.product-image-container {
-    position: relative;
-}
-
-.product-image-container img {
-    width: 60px;
-    height: 60px;
-    border-radius: 4px;
-    object-fit: cover;
-}
-
-.quantity-bubble {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: #444;
-    color: #fff;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-}
-
-.product-details {
-    flex-grow: 1;
-}
-
-.product-name {
-    font-weight: 500;
-    margin: 0;
-}
-
-.product-location {
-    font-size: 0.8rem;
-    color: #777;
-    margin: 0;
-}
-
-.product-price p {
-    font-weight: 600;
-    margin: 0;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    margin: 1.5rem 0;
-}
-
-.summary-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-.summary-row p {
-    margin: 0;
-    font-size: 0.95rem;
-}
-
-.total-row {
-    font-weight: 600;
-}
-
-.total-price {
-    text-align: right;
-}
-
-.total-price span {
-    font-size: 0.8rem;
-    color: #777;
-    font-weight: normal;
-}
-
-.total-price h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .checkout-content {
-        flex-direction: column;
-    }
-
-    .header-right {
-        display: none;
-    }
-
-    .logo {
-        text-align: center;
-        width: 100%;
-    }
-
-    .site-header {
-        padding: 1rem;
-    }
+  .place-order-btn {
+    font-size: 15px;
+  }
 }

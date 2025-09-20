@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = "ami_1234@";
+$pass = "";
 $dbname = "flower_db";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
